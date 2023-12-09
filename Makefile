@@ -319,6 +319,7 @@ include scripts/subarch.include
 # Alternatively CROSS_COMPILE can be set in the environment.
 # Default value for CROSS_COMPILE is not to prefix executables
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
+
 ARCH		?= $(SUBARCH)
 
 # Architecture as present in compile.h
@@ -792,7 +793,7 @@ endif
 
 ifdef CONFIG_CFP
 #CFP_CC		?= $(srctree)/../../vendor/qcom/proprietary/llvm-arm-toolchain-ship/10.0/bin/clang
-CFP_CC		= $(srctree)/toolchain/llvm-arm-toolchain-ship/10.0/bin/clang
+CFP_CC		= /opt/qcom/Qualcomm_Snapdragon_LLVM_ARM_Toolchain_OEM/10.0.11.0/bin/clang
 CC		= $(srctree)/scripts/gcc-wrapper.py $(CFP_CC)
 endif
 
